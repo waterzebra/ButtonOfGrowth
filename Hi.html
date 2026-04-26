@@ -1,17 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Font Size Changer</title>
+    <style>
+        /* Optional: Center the button on the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
-<button id="NumaIei" onclick="Oof()">Text of button</button>
-<script>
 
-let size = 2
-document.getElementById("NumaIei").style.fontSize = "2px"
+    <button id="NumaIei" onclick="Oof()">Text of button</button>
 
-function Oof() {
-size += 2;
-document.getElementById("NumaIei").style.fontSize = size + "px"
-}
+    <script>
+        // Initial font size in pixels
+        let size = 2;
+        const button = document.getElementById("NumaIei");
 
-</script>
+        // Set initial font size
+        button.style.fontSize = size + "px";
+
+        // Function to increase font size by 2px each click
+        function Oof() {
+            size += 2;
+            button.style.fontSize = size + "px";
+        }
+    </script>
+
 </body>
 </html>
